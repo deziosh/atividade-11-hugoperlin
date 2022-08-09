@@ -2,23 +2,21 @@ package base.exemplos.fxml;
 
 import java.net.URL;
 
+import base.exemplos.fxml.controllers.TelaCadastro;
+import base.exemplos.fxml.controllers.TelaPrincipal;
 import base.utils.BaseAppNavigator;
 import base.utils.ScreenRegistry;
 import javafx.scene.Parent;
 
 public class App extends BaseAppNavigator{
 
-    public static final ScreenRegistry PRINCIPAL = new ScreenRegistry(App.class,"telas/principal.fxml",o->new JanelaPrincipal());
-    public static final ScreenRegistry PARTE1 = new ScreenRegistry(App.class,"telas/parte1.fxml",o->new Parte1());
-    public static final ScreenRegistry PARTE2 = new ScreenRegistry(App.class,"telas/parte2.fxml",o->new Parte2());
-    public static final ScreenRegistry TELA1 = new ScreenRegistry(App.class,"telas/tela1.fxml",o->new Tela1());
+    public static final ScreenRegistry PRINCIPAL = new ScreenRegistry(App.class,"telas/Principal.fxml", o-> new TelaPrincipal());
 
+    public static final ScreenRegistry CADASTRO = new ScreenRegistry(App.class,"telas/Cadastro.fxml", o-> new TelaCadastro());
 
     @Override
     public ScreenRegistry getHomeFXML() {
-        System.out.println("aqui...");
-        System.out.println(PRINCIPAL.getFxmlResource());
-        return PRINCIPAL;
+        return CADASTRO;
     }
 
     @Override
@@ -28,9 +26,8 @@ public class App extends BaseAppNavigator{
 
     @Override
     public String getAppTitle() {
+        // TODO Auto-generated method stub
         return "Teste";
     }
-
-
-    
+   
 }

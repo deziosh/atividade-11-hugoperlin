@@ -9,19 +9,16 @@
 <?import javafx.geometry.Insets?>
 
 
-<BorderPane xmlns="http://javafx.com/javafx" 
+<VBox xmlns="http://javafx.com/javafx" 
       xmlns:fx="http://javafx.com/fxml" 
       prefHeight="400" prefWidth="600"
-      fx:controller="base.exemplos.fxml.Parte1"
+      fx:controller="base.exemplos.fxml.controllers.TelaPrincipal"
+      alignment="CENTER"
+      spacing="10.0"
       >
 
-    <left>
-        <VBox>
-            <Button text="Parte 1" onAction="#mostraParte1"/>
-            <Button text="Parte 2" onAction="#mostraParte2"/>
-            <Button text="Tela 1" onAction="#mostraTela1"/>
-            
-        </VBox>
-    </left>
+      <Button text ="Cadastro"/>
+      <Button text ="Listar"/>
 
-</BorderPane>
+
+</VBox>
